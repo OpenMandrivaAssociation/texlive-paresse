@@ -1,3 +1,9 @@
+# revision 22257
+# category Package
+# catalog-ctan /macros/latex/contrib/paresse
+# catalog-date 2011-04-20 18:25:54 +0200
+# catalog-license lppl
+# catalog-version 4
 Name:		texlive-paresse
 Version:	4
 Release:	1
@@ -53,6 +59,7 @@ may (for example) type SSa to get the effect of $\alpha$.
 %doc %{_texmfdistdir}/source/latex/paresse/paresse-doc.dtx
 %doc %{_texmfdistdir}/source/latex/paresse/paresse.dtx
 %doc %{_texmfdistdir}/source/latex/paresse/paresse.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,3 +70,5 @@ may (for example) type SSa to get the effect of $\alpha$.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

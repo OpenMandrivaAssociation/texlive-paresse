@@ -59,3 +59,17 @@ may (for example) type SSa to get the effect of $\alpha$.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 4-2
++ Revision: 754645
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 4-1
++ Revision: 719196
+- texlive-paresse
+- texlive-paresse
+- texlive-paresse
+- texlive-paresse
+

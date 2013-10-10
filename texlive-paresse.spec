@@ -1,13 +1,13 @@
-# revision 22257
+# revision 29803
 # category Package
 # catalog-ctan /macros/latex/contrib/paresse
-# catalog-date 2011-04-20 18:25:54 +0200
+# catalog-date 2013-02-16 13:58:07 +0100
 # catalog-license lppl
-# catalog-version 4
+# catalog-version 4.1
 Name:		texlive-paresse
-Version:	4
-Release:	2
-Summary:	Defines simple macros for greek letters
+Version:	4.1
+Release:	1
+Summary:	Define simple macros for greek letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/paresse
 License:	LPPL
@@ -20,8 +20,9 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-Defines macros using SS to type greek letters so that the user
-may (for example) type SSa to get the effect of $\alpha$.
+The package defines macros using SS to type greek letters. so
+that the user may (for example) type SSa to get the effect of
+$\alpha$.
 
 %post
     %{_sbindir}/texlive.post
@@ -59,17 +60,3 @@ may (for example) type SSa to get the effect of $\alpha$.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 4-2
-+ Revision: 754645
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 4-1
-+ Revision: 719196
-- texlive-paresse
-- texlive-paresse
-- texlive-paresse
-- texlive-paresse
-

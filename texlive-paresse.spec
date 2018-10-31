@@ -6,7 +6,7 @@
 # catalog-version 4.1
 Name:		texlive-paresse
 Version:	4.1
-Release:	9
+Release:	10
 Summary:	Define simple macros for greek letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/paresse

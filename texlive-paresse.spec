@@ -1,19 +1,13 @@
-# revision 29803
-# category Package
-# catalog-ctan /macros/latex/contrib/paresse
-# catalog-date 2013-02-16 13:58:07 +0100
-# catalog-license lppl
-# catalog-version 4.1
 Name:		texlive-paresse
-Version:	4.1
-Release:	10
+Version:	59228
+Release:	1
 Summary:	Define simple macros for greek letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/paresse
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/paresse.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/paresse.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/paresse.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/paresse.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/paresse.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/paresse.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,35 +19,24 @@ that the user may (for example) type SSa to get the effect of
 $\alpha$.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/paresse/paresse.sty
-%{_texmfdistdir}/tex/latex/paresse/paresseold.sto
-%{_texmfdistdir}/tex/latex/paresse/paresseutf8.sto
-%doc %{_texmfdistdir}/doc/latex/paresse/paresse-en.pdf
-%doc %{_texmfdistdir}/doc/latex/paresse/paresse-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/paresse/paresse-ex-fr.pdf
-%doc %{_texmfdistdir}/doc/latex/paresse/paresse-fr.pdf
-%doc %{_texmfdistdir}/doc/latex/paresse/paresse.pdf
+%{_texmfdistdir}/tex/latex/paresse
+%doc %{_texmfdistdir}/doc/latex/paresse
 #- source
-%doc %{_texmfdistdir}/source/latex/paresse/LISEZMOI
-%doc %{_texmfdistdir}/source/latex/paresse/Makefile
-%doc %{_texmfdistdir}/source/latex/paresse/README
-%doc %{_texmfdistdir}/source/latex/paresse/paresse-TEST.zip
-%doc %{_texmfdistdir}/source/latex/paresse/paresse-doc.dtx
-%doc %{_texmfdistdir}/source/latex/paresse/paresse.dtx
-%doc %{_texmfdistdir}/source/latex/paresse/paresse.ins
+%doc %{_texmfdistdir}/source/latex/paresse
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 

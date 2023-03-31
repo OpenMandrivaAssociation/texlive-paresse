@@ -1,6 +1,6 @@
 Name:		texlive-paresse
 Version:	59228
-Release:	1
+Release:	2
 Summary:	Define simple macros for greek letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/paresse
